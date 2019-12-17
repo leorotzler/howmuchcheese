@@ -1,0 +1,22 @@
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+
+    &--50 {
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+    }
+}

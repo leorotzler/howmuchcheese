@@ -1,0 +1,8 @@
+@import 'variables';
+@import "~bulma";
+
+body {
+    background: $bgc-body;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: $black;
+}
