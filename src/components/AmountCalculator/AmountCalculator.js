@@ -130,14 +130,14 @@ export default function AmountCalculator(props) {
           left
           onClick={() => clickLess()}
         >
-          -
+          <span>-</span>
         </Button>
         <Button
           disabled={moreButtonDisabled}
           right
           onClick={() => clickMore()}
         >
-          +
+          <span>+</span>
         </Button>
       </People>
       <div>
