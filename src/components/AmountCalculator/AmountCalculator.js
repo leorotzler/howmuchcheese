@@ -64,6 +64,11 @@ const Button = styled.button`
   text-align: center;
 `
 
+const Span = styled.span`
+  width: 100%;
+  text-align: center;
+`
+
 const AmountNumber = styled.span`
   font-size: 2.5rem;
 `
@@ -130,14 +135,14 @@ export default function AmountCalculator(props) {
           left
           onClick={() => clickLess()}
         >
-          <span>-</span>
+          <Span>-</Span>
         </Button>
         <Button
           disabled={moreButtonDisabled}
           right
           onClick={() => clickMore()}
         >
-          <span>+</span>
+          <Span>+</Span>
         </Button>
       </People>
       <div>
