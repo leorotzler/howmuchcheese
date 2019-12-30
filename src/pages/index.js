@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import { GiCheeseWedge } from 'react-icons/gi'
 
 const StyledButton = styled.button`
+  display: flex;
   width: 8rem;
   height: 8rem;
   margin-top: 2rem;
@@ -17,13 +18,12 @@ const StyledButton = styled.button`
   border: 0;
   border-radius: 50rem;
   appearance: none;
+  justify-content: center;
 
   a {
+    width: 1em;
+    height: 1em;
     color: black;
-  }
-
-  svg {
-    padding-top: 1rem;
   }
 `
 

@@ -45,17 +45,22 @@ const AmountPeople = styled.span`
 `
 
 const Button = styled.button`
+  display: flex;
   position: absolute;
   width: 5rem;
   height: 5rem;
   bottom: 0;
   ${props => (props.left ? `left` : 'right')}: -2.5rem;
+  padding: 0;
   background-color: #f2d4ab;
   border: 0;
   border-radius: 50rem;
   text-align: center;
   font-size: 3rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  appearance: none;
+  justify-content: center;
+  align-items: center;
 `
 
 const AmountNumber = styled.span`
