@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 import { GiCheeseWedge } from 'react-icons/gi'
 
-const Button = styled.button`
+const StyledButton = styled.button`
   width: 8rem;
   height: 8rem;
   margin-top: 2rem;
@@ -31,11 +31,11 @@ const IndexPage = () => {
       <SEO title="Home" />
       <h1>SayCheese!</h1>
       <div>
-        <Button>
+        <StyledButton>
           <Link to="/what">
             <GiCheeseWedge />
           </Link>
-        </Button>
+        </StyledButton>
       </div>
     </Layout>
   )

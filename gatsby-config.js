@@ -17,6 +17,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `howmuchcheese`,
