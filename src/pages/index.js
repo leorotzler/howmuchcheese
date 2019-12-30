@@ -19,11 +19,13 @@ const StyledButton = styled.button`
   border-radius: 50rem;
   appearance: none;
   justify-content: center;
+  text-align: center;
 
   a {
     width: 1em;
     height: 1em;
     color: black;
+    text-align: center;
   }
 `
 
