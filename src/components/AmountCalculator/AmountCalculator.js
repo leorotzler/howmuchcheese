@@ -61,6 +61,7 @@ const Button = styled.button`
   appearance: none;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `
 
 const AmountNumber = styled.span`
