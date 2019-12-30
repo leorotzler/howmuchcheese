@@ -20,6 +20,7 @@ const StyledButton = styled.button`
   appearance: none;
   justify-content: center;
   text-align: center;
+  align-items: center;
 
   a {
     width: 1em;
