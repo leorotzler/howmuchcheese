@@ -25,13 +25,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `howmuchcheese`,
-        short_name: `starter`,
+        name: `How much cheese?`,
+        short_name: `howmuchcheese`,
         start_url: `/`,
         background_color: `#E2B14B`,
         theme_color: `#E2B14B`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        display: `standalone`,
+        icon: `src/images/cheese.png`,
       },
     },
     `gatsby-plugin-offline`,
