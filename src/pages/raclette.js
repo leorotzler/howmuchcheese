@@ -6,19 +6,17 @@ import Image from '../components/image'
 import SEO from '../components/seo'
 import AmountCalculator from '../components/AmountCalculator/AmountCalculator'
 
-const Fondue = () => (
+const Raclette = () => (
   <Layout>
-    <SEO title="Fondue" />
-    <div className="">
-      <AmountCalculator
-        foodName="Fondue"
-        minAmount={150}
-        maxAmount={200}
-        minPersons={1}
-        maxPersons={20}
-      />
-    </div>
+    <SEO title="Raclette" />
+    <AmountCalculator
+      foodName="Raclette"
+      minAmount={200}
+      maxAmount={250}
+      minPersons={1}
+      maxPersons={20}
+    />
   </Layout>
 )
 
-export default Fondue
+export default Raclette
