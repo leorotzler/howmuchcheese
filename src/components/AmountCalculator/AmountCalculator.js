@@ -49,9 +49,7 @@ const Button = styled.button`
   width: 5rem;
   height: 5rem;
   bottom: 0;
-  ${props => (props.left ? `left: ${props.left}rem` : '')}
-  ${props =>
-    props.right ? `right: ${props.right}rem` : ''}
+  ${props => (props.left ? `left` : 'right')}: -2.5rem;
   background-color: #f2d4ab;
   border: 0;
   border-radius: 50rem;
@@ -123,14 +121,14 @@ export default function AmountCalculator(props) {
         <AmountPeople>{people}</AmountPeople>
         <Button
           disabled={lessButtonDisabled}
-          left={-2.5}
+          left
           onClick={() => clickLess()}
         >
           -
         </Button>
         <Button
           disabled={moreButtonDisabled}
-          right={-2.5}
+          right
           onClick={() => clickMore()}
         >
           +
