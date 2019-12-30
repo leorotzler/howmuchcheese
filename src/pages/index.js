@@ -15,6 +15,7 @@ const StyledButton = styled.button`
   background-color: #f2d4ab;
   border: 0;
   border-radius: 50rem;
+  appearance: none;
 
   a {
     color: black;
