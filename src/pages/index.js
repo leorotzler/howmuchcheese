@@ -30,11 +30,15 @@ const StyledButton = styled.button`
   }
 `
 
+const H1 = styled.h1`
+  font-family: 'Pacifico', cursive;
+`
+
 const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>SayCheese!</h1>
+      <H1>SayCheese!</H1>
       <div>
         <StyledButton>
           <Link to="/what">

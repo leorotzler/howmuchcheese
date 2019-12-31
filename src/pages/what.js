@@ -23,6 +23,7 @@ const Button = styled.div`
     background: #F2D4AB;
     font-size: 2.5rem;
     text-align: center;
+    font-family: 'Pacifico', cursive;
 
     &:hover {
         box-shadow: 0px 0px 8px rgba(0,0,0,0.2);

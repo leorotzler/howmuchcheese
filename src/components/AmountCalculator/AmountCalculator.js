@@ -42,6 +42,7 @@ const People = styled.div`
 const AmountPeople = styled.span`
   font-size: 2rem;
   line-height: 3rem;
+  font-family: 'Pacifico', cursive;
 `
 
 const Button = styled.button`
@@ -71,6 +72,7 @@ const Span = styled.span`
 
 const AmountNumber = styled.span`
   font-size: 2.5rem;
+  font-family: 'Pacifico', cursive;
 `
 
 const Divider = styled.span`
@@ -84,14 +86,16 @@ const CompanionFood = styled.p`
 
 const UnitSwitchButton = styled.button`
   display: flex;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
   appearance: none;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1rem;
+  font-weight: 700;
   background-color: #f2d4ab;
   border: 0;
-  font-family: 'Pacifico', cursive;
 `
 
 export default function AmountCalculator(props) {
