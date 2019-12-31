@@ -78,6 +78,22 @@ const Divider = styled.span`
   font-size: 2.5rem;
 `
 
+const CompanionFood = styled.p`
+  font-size: 1.8em;
+`
+
+const UnitSwitchButton = styled.button`
+  display: flex;
+  appearance: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #f2d4ab;
+  border: 0;
+  font-family: 'Pacifico', cursive;
+`
+
 export default function AmountCalculator(props) {
   const [people, setPeople] = useState(props.minPersons)
   const [lessAmount, setLessAmount] = useState(props.minAmount)
@@ -85,9 +101,15 @@ export default function AmountCalculator(props) {
   const [moreAmount, setMoreAmount] = useState(props.maxAmount)
   const [moreButtonDisabled, setMoreButtonDisabled] = useState(false)
 
-  const calculateAmount = (persons) => {
-      setLessAmount(props.minAmount * persons)
-      setMoreAmount(props.maxAmount * persons)
+  const [isMetric, setMetric] = useState(true)
+
+  const calculateAmount = persons => {
+    setLessAmount(props.minAmount * persons)
+    setMoreAmount(props.maxAmount * persons)
+  }
+
+  const switchUnits = () => {
+    isMetric ? setMetric(false) : setMetric(true)
   }
 
   /**
@@ -98,8 +120,8 @@ export default function AmountCalculator(props) {
       return
     }
 
-    if ((people - 1) === props.minPersons) {
-        setLessButtonDisabled(true)
+    if (people - 1 === props.minPersons) {
+      setLessButtonDisabled(true)
     }
 
     setPeople(people - 1)
@@ -112,16 +134,20 @@ export default function AmountCalculator(props) {
    */
   const clickMore = () => {
     if (people >= props.maxPersons) {
-        return
+      return
     }
 
-    if ((people + 1) >= props.maxPersons) {
-        setMoreButtonDisabled(true)
+    if (people + 1 >= props.maxPersons) {
+      setMoreButtonDisabled(true)
     }
 
     setPeople(people + 1)
     setLessButtonDisabled(false)
     calculateAmount(people + 1)
+  }
+
+  const convertGramToOunce = (gram) => {
+      return (gram / 28.35)
   }
 
   return (
@@ -130,30 +156,32 @@ export default function AmountCalculator(props) {
       <People>
         <MdPersonOutline />
         <AmountPeople>{people}</AmountPeople>
-        <Button
-          disabled={lessButtonDisabled}
-          left
-          onClick={() => clickLess()}
-        >
+        <Button disabled={lessButtonDisabled} left onClick={() => clickLess()}>
           <Span>-</Span>
         </Button>
-        <Button
-          disabled={moreButtonDisabled}
-          right
-          onClick={() => clickMore()}
-        >
+        <Button disabled={moreButtonDisabled} right onClick={() => clickMore()}>
           <Span>+</Span>
         </Button>
       </People>
       <div>
-        <AmountNumber>{lessAmount}g</AmountNumber>
+        <AmountNumber>
+          {isMetric ? `${lessAmount}g` : `${Math.round(convertGramToOunce(lessAmount))}oz`}
+        </AmountNumber>
         {props.maxAmount && (
           <>
             <Divider>-</Divider>
-            <AmountNumber>{moreAmount}g</AmountNumber>
+            <AmountNumber>
+              {isMetric ? `${moreAmount}g` : `${Math.round(convertGramToOunce(moreAmount))}oz`}
+            </AmountNumber>
           </>
         )}
       </div>
+      <CompanionFood>
+        And the same amount of {props.companionFood}
+      </CompanionFood>
+      <UnitSwitchButton onClick={() => switchUnits()}>
+        Switch to {isMetric ? 'Imperial' : 'Metric'}
+      </UnitSwitchButton>
     </Container>
   )
 }

@@ -15,6 +15,7 @@ const Raclette = () => (
       maxAmount={250}
       minPersons={1}
       maxPersons={20}
+      companionFood="potatoes"
     />
   </Layout>
 )

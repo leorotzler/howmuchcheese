@@ -16,6 +16,7 @@ const Fondue = () => (
         maxAmount={200}
         minPersons={1}
         maxPersons={20}
+        companionFood="bread"
       />
     </div>
   </Layout>

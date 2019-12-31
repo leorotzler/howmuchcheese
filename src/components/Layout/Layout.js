@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     background: #E2B14B;
     color: black;
     font-family: 'Pacifico', cursive;
+    font-size: 10px;
   }
 
   h1 {
