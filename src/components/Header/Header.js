@@ -6,7 +6,9 @@ import styled from 'styled-components'
 const StyledLink = styled.div`
   a {
     color: black;
-    text-decoration: underline;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Pacifico', cursive;
   }
 `
 

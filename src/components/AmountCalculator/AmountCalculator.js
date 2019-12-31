@@ -11,7 +11,8 @@ const Container = styled.div`
 `
 
 const H1 = styled.h1`
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
   font-size: 1.5rem;
   text-align: center;
 `
