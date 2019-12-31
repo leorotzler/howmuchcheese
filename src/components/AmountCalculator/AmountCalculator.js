@@ -160,10 +160,10 @@ export default function AmountCalculator(props) {
       <People>
         <MdPersonOutline />
         <AmountPeople>{people}</AmountPeople>
-        <Button disabled={lessButtonDisabled} left onClick={() => clickLess()}>
+        <Button disabled={lessButtonDisabled} aria-label={`${props.foodName} for ${people - 1}`} left onClick={() => clickLess()}>
           <Span>-</Span>
         </Button>
-        <Button disabled={moreButtonDisabled} right onClick={() => clickMore()}>
+        <Button disabled={moreButtonDisabled} aria-label={`${props.foodName} for ${people + 1}`} right onClick={() => clickMore()}>
           <Span>+</Span>
         </Button>
       </People>
@@ -184,7 +184,7 @@ export default function AmountCalculator(props) {
         And the same amount of {props.companionFood}
       </CompanionFood>
       <UnitSwitchButton onClick={() => switchUnits()}>
-        Switch to {isMetric ? 'Imperial' : 'Metric'}
+        <label>Switch to {isMetric ? 'Imperial' : 'Metric'}</label>
       </UnitSwitchButton>
     </Container>
   )

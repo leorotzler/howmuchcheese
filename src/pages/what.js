@@ -43,12 +43,12 @@ export default function what() {
       <SEO title="Home" />
       <H1>What to eat?</H1>
       <ButtonContainer>
-        <Button>
+        <Button aria-label="Fondue">
             <Link to="/fondue">
                 Fondue
             </Link>
         </Button>
-        <Button>
+        <Button ria-label="Raclette">
             <Link to="/raclette">
                 Raclette
             </Link>

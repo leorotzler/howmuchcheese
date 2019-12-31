@@ -40,7 +40,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <H1>SayCheese!</H1>
       <div>
-        <StyledButton>
+        <StyledButton aria-label="Start">
           <Link to="/what">
             <GiCheeseWedge />
           </Link>
